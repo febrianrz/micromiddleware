@@ -1,0 +1,12 @@
+{
+    "name": "febrianrz/micromidlleware",
+    "description": "Middleware untuk microservice Alter Indonesia",
+    "authors": [
+        {
+            "name": "febrian reza",
+            "email": "febrianrz@gmail.com"
+        }
+    ],
+    "require": {},
+    "minimum-stability": "dev"
+}
