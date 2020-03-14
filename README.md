@@ -19,3 +19,7 @@ Route::middleware('auth.micro')
 ```bash
 $request->user
 ```
+* Lakukan publish configurasi dengan perintah
+```bash
+php artisan vendor:publish
+```
