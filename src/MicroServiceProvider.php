@@ -10,12 +10,12 @@ class MicroServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'micro.php' => config_path('micro.php'),
+            __DIR__.'/micro.php' => config_path('micro.php'),
         ], 'config');
     }
     public function register()
     {
-        $this->mergeConfigFrom( __DIR__.'micro.php', 'micro');
+        $this->mergeConfigFrom( __DIR__.'/micro.php', 'micro');
     }
 
 }

@@ -3,7 +3,7 @@ Micromiddleware untuk Laravel Microservice Alter Indonesia
 
 ## Installasi
 ```bash
-composer require 
+composer require febrianrz/micromidlleware
 ```
 
 ## Penggunaan
