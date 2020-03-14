@@ -13,5 +13,13 @@
         "psr-4": {
             "Febrianrz\\Micromidlleware\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Febrianrz\\Micromidlleware\\MicroServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
 }

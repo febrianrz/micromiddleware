@@ -36,7 +36,7 @@ class MicroAuthenticate
                 'base_uri'  => $auth_url,
                 'timeout'   => 2.0
             ]);
-            $response = $client->request('GET', '/api/v1/profile', [
+            $response = $client->request('GET', config('micro')['endpoint']['profile'], [
                 'headers' => [
                     'Authorization' => $request->header('Authorization'),
                     'Accept'     => 'application/json',
