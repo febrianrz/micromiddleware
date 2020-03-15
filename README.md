@@ -10,6 +10,7 @@ composer require febrianrz/micromidlleware
 * Pada file app/Http/Kernel.php pada bagian $routeMiddleware tambahkan
 ```bash
 'auth.micro'    => \Febrianrz\Micromidlleware\MicroAuthenticate::class,
+'auth.micro-app'=> \Febrianrz\Micromidlleware\MicroAppAuthenticate::class,
 ```
 * Pada bagian api.php, gunakan middleware 
 ```bash
