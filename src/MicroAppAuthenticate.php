@@ -21,7 +21,7 @@ class MicroAppAuthenticate
             return $next($request);
         }
         return response()->json([
-            'message'   => 'Cannot access this resource or unauthenticated'
+            'message'   => 'Cannot access this resource or unauthenticat server'
         ]);
         
     }
@@ -43,11 +43,11 @@ class MicroAppAuthenticate
                 ]
             ]);
             if($response->getStatusCode() == 200){
-                return json_decode($response->getBody()->getContents());
+                return true;
             } 
-            return null;
+            return false;
         } catch(\Exception $e){
-            return abort(500,$e->getMessage());
+            return false;
         }
     }
 }
