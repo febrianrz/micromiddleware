@@ -38,8 +38,8 @@ class MicroAppAuthenticate
                     'Accept'     => 'application/json',
                 ],
                 'query'     => [
-                    'app_id'    => config('micro')['app']['id'],
-                    'app_secret'    => config('micro')['app']['secret'],
+                    'app_id'    => $request->app_id,
+                    'app_secret'    => $request->app_secret,
                 ]
             ]);
             if($response->getStatusCode() == 200){
