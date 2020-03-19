@@ -31,7 +31,7 @@ class MicroAppAuthenticate
             $auth_url = config('micro')['url']['auth'];
             $client = new Client([
                 'base_uri'  => $auth_url,
-                'timeout'   => 2.0
+                'timeout'   => (isset(config('micro')['timeout'])?config('micro')['timeout']:10)
             ]);
             $response = $client->request('GET', config('micro')['endpoint']['app_check'], [
                 'headers'   => [
