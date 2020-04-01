@@ -23,9 +23,10 @@ class MicroAuthenticate
             ]);
             return $next($request);
         } 
-        return response()->json([
-            'message'   => 'Cannot access this resource or unauthenticated'
-        ]);
+        // return response()->json([
+        //     'message'   => 'Cannot access this resource or unauthenticated'
+        // ]);
+        return abort(401,'Cannot access this resource or unauthenticate server');
         
     }
 

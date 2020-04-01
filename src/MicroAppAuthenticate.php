@@ -20,9 +20,10 @@ class MicroAppAuthenticate
         if($check) {
             return $next($request);
         }
-        return response()->json([
-            'message'   => 'Cannot access this resource or unauthenticat server'
-        ]);
+        // return response()->json([
+        //     'message'   => 'Cannot access this resource or unauthenticat server'
+        // ]);
+        return abort(401,'Cannot access this resource or unauthenticate server');
         
     }
 
