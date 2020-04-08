@@ -4,7 +4,8 @@ return [
     'app'   => [
         'id'        => 2,
         'secret'    => 'xxx',
-        'redirect_uri'=> ''
+        'redirect_uri'=> '',
+        'auth_path' => null
     ],
     'url'   => [
         'auth'  => 'http://localhost:8001'

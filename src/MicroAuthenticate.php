@@ -37,7 +37,12 @@ class MicroAuthenticate
                 'base_uri'  => $auth_url,
                 'timeout'   => (isset(config('micro')['timeout'])?config('micro')['timeout']:10)
             ]);
-            $response = $client->request('GET', config('micro')['endpoint']['profile'], [
+            if(config('micro')['app']['auth_path']){
+                $uri = config('micro')['app']['auth_path'] . config('micro')['endpoint']['profile'];
+            } else {
+                $uri = config('micro')['endpoint']['profile'];
+            }
+            $response = $client->request('GET', $uri, [
                 'headers' => [
                     'Authorization' => $request->header('Authorization'),
                     'Accept'     => 'application/json',
